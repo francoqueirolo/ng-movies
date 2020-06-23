@@ -12,13 +12,21 @@ export class HomeComponent implements OnInit {
   popularesNinos: any;
 
   constructor(public ps: PeliculasService) {
-    this.ps.getCartelera().subscribe((data) => (this.cartelera = data));
+    this.ps.getCartelera().subscribe((data: any) => {
+      this.cartelera = data.results;
+      console.log('cartelera: ', this.cartelera);
+    });
 
-    this.ps.getPopulares().subscribe((data) => (this.populares = data));
+    this.ps.getPopulares().subscribe((data: any) => {
+      this.populares = data.results;
+      console.log('populares: ', this.populares);
+    });
 
-    this.ps
-      .getPopularesNinos()
-      .subscribe((data) => (this.popularesNinos = data));
+    this.ps.getPopularesNinos().subscribe((data: any) => {
+      this.popularesNinos = data.results;
+      console.log('popularesNinos: ', this.popularesNinos);
+
+    });
   }
 
   ngOnInit() {}

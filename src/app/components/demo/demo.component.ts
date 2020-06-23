@@ -7,11 +7,13 @@ import { PeliculasService } from '../../services/peliculas.service';
 })
 export class DemoComponent implements OnInit {
   peliculas: any;
+  isPeliculas = false;
 
   constructor(public ps: PeliculasService) {
-    this.ps.getPopulares().subscribe((pelis) => {
-      console.log(pelis);
-      this.peliculas = pelis;
+    this.ps.getPopulares().subscribe((data: any) => {
+      console.log(data.results);
+      this.peliculas = data.results;
+      this.isPeliculas = true;
     });
   }
 

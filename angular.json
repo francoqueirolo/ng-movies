@@ -88,13 +88,9 @@
               "src/assets"
             ],
             "styles": [
-              "styles.css",
-              "assets/b4/css/bootstrap.min.css"
+              "styles.css"
             ],
             "scripts": [
-              "assets/jquery/jquery.slim.min.js",
-              "assets/tether/tether.min.js",
-              "assets/b4/js/bootstrap.min.js"
             ]
           }
         },
