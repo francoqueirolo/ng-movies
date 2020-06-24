@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {}
 
   buscarPelicula(texto: string) {
-    if (texto.length == 0) {
+    if (texto.length === 0) {
       return;
     }
 
