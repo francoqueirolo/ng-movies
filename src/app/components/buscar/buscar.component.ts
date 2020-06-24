@@ -30,7 +30,6 @@ export class BuscarComponent implements OnInit {
 
     this.ps.buscarPelicula(this.buscar).subscribe((data: any) => {
       this.peliculas = data.results;
-      console.log('peliculas: ', this.peliculas);
     });
   }
 }
